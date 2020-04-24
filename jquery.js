@@ -50,9 +50,10 @@ $(function(){
           randomStep = Math.round(Math.random() * 4) + 1;
         } else {
           $("#counter").empty();
+          playing = false;
           stopAction();
           window.alert("You lose! Your score is " + score);
-          $("#startReset").html("Reset");
+          $("#startReset").html("Start");
           $("#counter").hide();
         }
 
