@@ -4,8 +4,8 @@ html {
 }
 
 #container {
-  height: 420px;
-  width: 550px;
+  height: 500px;
+  width: 650px;
   background-color: #9DD2EE;
   margin: 160px auto;
   padding: 20px;
@@ -15,6 +15,7 @@ html {
   -webkit-box-shadow: 2px 2px 0px 1px #00BBCC;
   /* [horizontal offset] [vertical offset] [blur radius] [optional spread radius] */
   position: relative;
+  overflow: hidden;
 }
 
 #score {
@@ -22,7 +23,8 @@ html {
   color: #888E5F;
   padding: 9px;
   position: absolute;
-  left: 500px;
+  top: 25px;
+  left: 590px;
   border-radius: 8px;
   box-shadow: 2px 2px 0px 0px #DDDD11;
   -moz-box-shadow: 2px 2px 0px 0px #DDDD11;
@@ -32,29 +34,9 @@ html {
   font-family: sans-serif;
 }
 
-#correct {
-  position: absolute;
-  left: 260px;
-  background-color: #2DF219;
-  color: #116619;
-  padding: 8px;
-  border-radius: 20px;
-  display: none;
-}
-
-#wrong {
-  position: absolute;
-  left: 262.2px;
-  background-color: #F22619;
-  color: #661119;
-  padding: 8px;
-  border-radius: 20px;
-  display: none;
-}
-
 #window {
-  width: 460px;
-  height: 250px;
+  width: 600px;
+  height: 320px;
   margin: 10px auto 20px auto;
   background-color: white;
   border-color: #66D2EE;
@@ -68,6 +50,8 @@ html {
   color: black;
   letter-spacing: 5px;
   line-height: 105px;
+  position: relative;
+  overflow: hidden;
 }
 
 #instruction {
@@ -76,7 +60,7 @@ html {
   margin: auto;
   text-align: center;
   font-size: 20px;
-  line-height: 54px;
+  line-height: 45px;
   border-radius: 10px;
   font-family: sans-serif;
   font-size: 25px;
@@ -110,16 +94,27 @@ html {
 }
 
 #counter {
-  width: 140px;
-  padding: 10px;
+  width: 90px;
+  padding: 5px;
+  padding-bottom: 0px;
   position: absolute;
   top: 25px;
-  left: 12px;
-  background-color: rgba(181, 235, 36, 0.6);
+  left: 25px;
+  background-color: rgba(140, 150, 220, 0.6);
   border-radius: 8px;
   font-family: sans-serif;
-  text-align: left;
-  text-align: center;
   /* visibility: hidden; */
-  /* display: none; */
+  display: none;
+}
+
+.heart{
+  width: 20px;
+  height: auto;
+  margin: 5px;
+  line-height: 10px;
+}
+
+.fruit{
+  display: none;
+  position: absolute;
 }

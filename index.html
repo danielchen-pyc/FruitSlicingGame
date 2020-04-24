@@ -5,29 +5,24 @@
     <title>Interactive Math Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <link rel="stylesheet" href="styling.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="container">
       <div id="score" onclick="clickStartReset">
         Score: <span id=scoreVal></span>
       </div>
-      <div id="correct">
-        Correct
-      </div>
-      <div id="wrong">
-        Wrong
-      </div>
       <div id="instruction">
         Slice the Fruits!
       </div>
       <div id="window">
-
+        <img id="fruit1" class="fruit">
       </div>
       <div id="startReset" onclick="startReset()">
         <span id="startResetVal">Start</span>
       </div>
       <div id="counter">
-        Remaining tries: <span id="triesRemaining">2</span>
+        <span id="triesRemaining"></span>
       </div>
     </div>
     <script src="jquery.js"></script>
