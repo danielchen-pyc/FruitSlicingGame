@@ -118,3 +118,7 @@ html {
   display: none;
   position: absolute;
 }
+
+.ui-effects-explode {
+  margin : 0
+}

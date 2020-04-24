@@ -25,7 +25,11 @@ $(function(){
   $("#fruit1").mouseover(function() {
     score++;
     $("#scoreVal").html(score);
-    
+    var random = Math.round(Math.random() * 3) + 1;
+    document.getElementById("sliceSound" + random).play();
+    clearInterval(action);
+    $("#fruit1").hide("explode");
+    setTimeout(startAction, 500);
   });
 
 
@@ -43,12 +47,12 @@ $(function(){
           $("#fruit1").show();
           chooseFruit();
           $("#fruit1").css({'left': Math.random() * 540, 'top': -65});
-          randomStep = Math.round(Math.random() * 5) + 1;
+          randomStep = Math.round(Math.random() * 4) + 1;
         } else {
           $("#counter").empty();
-          clearInterval(action);
+          stopAction();
           window.alert("You lose! Your score is " + score);
-          $("#startReset").html("Start");
+          $("#startReset").html("Reset");
           $("#counter").hide();
         }
 
@@ -66,6 +70,11 @@ $(function(){
     for (i = 0; i < trialsLeft; i++) {
       $("#counter").append("<img class='heart' src='images/heart.png'>")
     }
+  }
+
+  function stopAction() {
+    $("#fruit1").hide();
+    clearInterval(action);
   }
 
 });
