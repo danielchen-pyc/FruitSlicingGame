@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Interactive Math Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="styling.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="score" onclick="clickStartReset">
+        Score: <span id=scoreVal></span>
+      </div>
+      <div id="correct">
+        Correct
+      </div>
+      <div id="wrong">
+        Wrong
+      </div>
+      <div id="instruction">
+        Slice the Fruits!
+      </div>
+      <div id="window">
+
+      </div>
+      <div id="startReset" onclick="startReset()">
+        <span id="startResetVal">Start</span>
+      </div>
+      <div id="counter">
+        Remaining tries: <span id="triesRemaining">2</span>
+      </div>
+    </div>
+    <script src="jquery.js"></script>
+  </body>
+</html>
